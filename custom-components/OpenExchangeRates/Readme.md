@@ -1,22 +1,25 @@
-# Home Assistant Custom Compoent for WUnderground Personal Weather Stations
+Home Assistant Custom Component to obtain exchange rates from https://openexchangerates.org/
 
-Requires an wunderground API key from http://api.wunderground.com/weather/api
+Obtain an API from https://openexchangerates.org/signup/free (free plan allows 1000 requests per month)
 
 Enable in config as such:
 
 ```yaml
 sensor:
-  platform: wunderground
-  api_key: xxxxxxxxxx
-  pws_id: XXXXXXXX
+  platform: openexchangerates
+  api_key: your_api_key
+  base: USD #optional
+  quote: EUR
+  name: USDEUR #optional
+```
 
-Refreshes every 5 minutes
+Currently, only 1 sensor can be added in the configuration. However, the attributes have the rates for all the other currencies, allowing you to add additional exchange rate sensors using value template such as:
+```
+sensor:
+      usdinr:        
+        value_template: ' {{ states.sensor.usdeur.attributes.INR }}'    
+```
 
 ## Installation
 
-Place sensor/wunderground.py in the /custom_components/sensor/ directory (you may need to create it) wherever your hass config file lies. Restart hass.
-
-
-## To-Do
-
-This component would be improved by a number of features, but what we really need is a generic weather component for HA first.
+Place the file openexchangerates.py in the /custom_components/sensor/ directory (you may need to create it) wherever your hass config file lies. Restart hass.
