@@ -1,4 +1,6 @@
-# Home Assistant Custom Compoent for WUnderground Personal Weather Stations
+# Home Assistant Custom Component for WUnderground Personal Weather Stations
+
+Based on initial work by [@kellbot](https://github.com/kellbot/hass-wunderground).
 
 Requires an wunderground API key from http://api.wunderground.com/weather/api
 
@@ -9,14 +11,9 @@ sensor:
   platform: wunderground
   api_key: xxxxxxxxxx
   pws_id: XXXXXXXX
-
+```
 Refreshes every 5 minutes
 
 ## Installation
 
-Place sensor/wunderground.py in the /custom_components/sensor/ directory (you may need to create it) wherever your hass config file lies. Restart hass.
-
-
-## To-Do
-
-This component would be improved by a number of features, but what we really need is a generic weather component for HA first.
+Place the file wunderground.py in /custom_components/sensor/ directory (you may need to create it) wherever your hass config file lies. Restart hass.
