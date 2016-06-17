@@ -4,7 +4,7 @@ Based on initial work by [@kellbot](https://github.com/kellbot/hass-wunderground
 
 Requires an wunderground API key from http://api.wunderground.com/weather/api
 
-Enable in config as such:
+To use the sensor, enter the following in your configuration.yaml:
 
 ```yaml
 sensor:
