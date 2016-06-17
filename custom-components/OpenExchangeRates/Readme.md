@@ -2,7 +2,7 @@ Home Assistant Custom Component to obtain exchange rates from https://openexchan
 
 Obtain an API from https://openexchangerates.org/signup/free (free plan allows 1000 requests per month)
 
-Enable in config as such:
+Add the following in your configuration.yaml:
 
 ```yaml
 sensor:
@@ -13,7 +13,7 @@ sensor:
   name: USDEUR #optional
 ```
 
-Currently, only 1 sensor can be added in the configuration. However, the attributes have the rates for all the other currencies, allowing you to add additional exchange rate sensors using value template such as:
+Currently, only 1 sensor can be added in the configuration. However, the attributes have the rates for all the other currencies, allowing you to add additional exchange rate sensors using value template. For example, to add another sensor for USDINR, just add the following to your configuration.yaml:
 ```
 sensor:
   usdinr:        
