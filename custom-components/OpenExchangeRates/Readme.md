@@ -16,8 +16,8 @@ sensor:
 Currently, only 1 sensor can be added in the configuration. However, the attributes have the rates for all the other currencies, allowing you to add additional exchange rate sensors using value template such as:
 ```
 sensor:
-      usdinr:        
-        value_template: ' {{ states.sensor.usdeur.attributes.INR }}'    
+  usdinr:        
+  value_template: ' {{ states.sensor.usdeur.attributes.INR }}'    
 ```
 
 ## Installation
