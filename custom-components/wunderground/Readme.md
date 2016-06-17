@@ -1,4 +1,4 @@
-# Home Assistant Custom Component for WUnderground Personal Weather Stations
+# Home Assistant Custom Component for WUnderground PWS
 
 Based on initial work by [@kellbot](https://github.com/kellbot/hass-wunderground).
 
@@ -10,7 +10,7 @@ Enable in config as such:
 sensor:
   platform: wunderground
   api_key: xxxxxxxxxx
-  pws_id: XXXXXXXX
+  pws_id: XXXXXXXX # You can pick a PWS that is closest to your area
 ```
 Refreshes every 5 minutes
 
